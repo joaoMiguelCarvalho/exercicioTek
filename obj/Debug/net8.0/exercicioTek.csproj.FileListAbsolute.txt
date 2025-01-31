@@ -27,10 +27,14 @@
 /home/joao/workspace/exercicio-tekever/exercicioTek/bin/Debug/net8.0/Avalonia.Themes.Simple.dll
 /home/joao/workspace/exercicio-tekever/exercicioTek/bin/Debug/net8.0/Avalonia.Win32.dll
 /home/joao/workspace/exercicio-tekever/exercicioTek/bin/Debug/net8.0/Avalonia.X11.dll
+/home/joao/workspace/exercicio-tekever/exercicioTek/bin/Debug/net8.0/DynamicData.dll
 /home/joao/workspace/exercicio-tekever/exercicioTek/bin/Debug/net8.0/HarfBuzzSharp.dll
 /home/joao/workspace/exercicio-tekever/exercicioTek/bin/Debug/net8.0/MicroCom.Runtime.dll
+/home/joao/workspace/exercicio-tekever/exercicioTek/bin/Debug/net8.0/ReactiveUI.dll
 /home/joao/workspace/exercicio-tekever/exercicioTek/bin/Debug/net8.0/SkiaSharp.dll
+/home/joao/workspace/exercicio-tekever/exercicioTek/bin/Debug/net8.0/Splat.dll
 /home/joao/workspace/exercicio-tekever/exercicioTek/bin/Debug/net8.0/System.IO.Pipelines.dll
+/home/joao/workspace/exercicio-tekever/exercicioTek/bin/Debug/net8.0/System.Reactive.dll
 /home/joao/workspace/exercicio-tekever/exercicioTek/bin/Debug/net8.0/Tmds.DBus.Protocol.dll
 /home/joao/workspace/exercicio-tekever/exercicioTek/bin/Debug/net8.0/runtimes/win-arm64/native/av_libglesv2.dll
 /home/joao/workspace/exercicio-tekever/exercicioTek/bin/Debug/net8.0/runtimes/win-x64/native/av_libglesv2.dll
