@@ -8,7 +8,7 @@ namespace exercicioTek.ViewModels
 {
     public class MainWindowViewModel : ViewModelBase
     {
-        public ObservableCollection<NetworkInterfaceModel> NetworkInterfaces { get; } = new();
+        public ObservableCollection<NetworkInterfaceModel> NetworkInterfaces { get; set; }
 
         private NetworkInterfaceModel? _selectedInterface;
         public NetworkInterfaceModel? SelectedInterface
@@ -17,24 +17,25 @@ namespace exercicioTek.ViewModels
             set => this.RaiseAndSetIfChanged(ref _selectedInterface, value);
         }
 
-        public MainWindowViewModel()
+        public MainWindowViewModel(NetworkDataModel networkDataModel)
         {
-            // Não precisamos mais do ICommand
+            NetworkInterfaces = new ObservableCollection<NetworkInterfaceModel>(networkDataModel.NetworkInterfacesData);
         }
 
-        // Método que será chamado diretamente ao clicar no botão
+        /// <summary>
+        /// Method for Refresh Button
+        /// </summary>
         public async Task RefreshAsync()
         {
-            // Simula uma operação assíncrona para obter as interfaces de rede
+            
             await Task.Delay(1000);  
 
-            // Atualiza a UI de forma segura na thread principal
+            // Update UI with the main thread
             await Dispatcher.UIThread.InvokeAsync(() =>
             {
-                // Limpa a lista de interfaces e adiciona novas
-                NetworkInterfaces.Clear();
-                NetworkInterfaces.Add(new NetworkInterfaceModel("eth0", "Ethernet", "Up", "AA:BB:CC:DD:EE:FF"));
-                NetworkInterfaces.Add(new NetworkInterfaceModel("wlan0", "Wi-Fi", "Down", "11:22:33:44:55:66"));
+                // TODO: The refresh is not updating
+                var newNetworkDataModel = new NetworkDataModel();
+				NetworkInterfaces = new ObservableCollection<NetworkInterfaceModel>(newNetworkDataModel.NetworkInterfacesData);
             });
         }
     }

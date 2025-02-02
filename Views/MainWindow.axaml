@@ -5,23 +5,48 @@
         xmlns:local="clr-namespace:exercicioTek.ViewModels;assembly=exercicioTek"
         mc:Ignorable="d" d:DesignWidth="1024" d:DesignHeight="600"
         x:Class="exercicioTek.Views.MainWindow"
-        Title="exercicioTek" Width="1024" Height="600">
+        Title="exercicioTek" Width="1024" Height="600"
+        d:DataContext="{d:DesignInstance local:MainWindowViewModel, IsDesignTimeCreatable=True}">
 
-    <StackPanel>
-        <!-- Botão que chama o RefreshAsync ao ser clicado -->
-        <Button Content="Refresh" Click="OnRefreshClick"/>
-        
-        <!-- Exibe a lista de interfaces de rede -->
-        <ListBox ItemsSource="{Binding NetworkInterfaces}">
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel>
-                        <TextBlock Text="{Binding Name}" />
-                        <TextBlock Text="{Binding Status}" />
-                    </StackPanel>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
-    </StackPanel>
-  
+	<Grid RowDefinitions="Auto, Auto, Auto">
+		<Grid Grid.Row="0" Margin="20 20 0 0" HorizontalAlignment="Left">
+			<TextBlock Text="Network Interfaces" FontSize="18"/>
+		</Grid>
+		<Grid Grid.Row="1" Margin="10 30 0 0" HorizontalAlignment="Left" ColumnDefinitions="*,*">
+			<TextBlock Text="Options:" Grid.Column="0" Margin="10 5 10 0"/>
+			<Button Content="Refresh" Click="OnRefreshClick" Grid.Column="1"/>
+		</Grid>
+		<Grid Grid.Row="2" Margin="0 20 0 5">
+			<ListBox ItemsSource="{Binding NetworkInterfaces}">
+				<ListBox.Template>
+					<ControlTemplate>
+						<DockPanel Margin="10, 0,10, 0">
+							<Grid DockPanel.Dock="Top" Height="30" ColumnDefinitions="200,200,150,300,100" Background="DimGray">
+								<Label Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="25, 0, 0, 0">Name</Label>
+								<Label Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="25, 0, 0, 0">Type</Label>
+								<Label Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="25, 0, 0, 0">Status</Label>
+								<Label Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="25, 0, 0, 0">Mac Address</Label>
+								<Label Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="25, 0, 0, 0"></Label>
+							</Grid>
+							<ItemsPresenter></ItemsPresenter>
+						</DockPanel>
+					</ControlTemplate>
+				</ListBox.Template>
+				<ListBox.ItemTemplate>
+
+					<DataTemplate>
+						<Grid ColumnDefinitions="200,200,150,300,100" Background="Blue" VerticalAlignment="Center">
+							<TextBlock Grid.Column="0" Text="{Binding Name}"  TextAlignment="Center"/>
+							<TextBlock Grid.Column="1" Text="{Binding Type}"  TextAlignment="Center"/>
+							<TextBlock Grid.Column="2" Text="{Binding Status}"  TextAlignment="Center"/>
+							<TextBlock Grid.Column="3" Text="{Binding MacAddress}"  TextAlignment="Center"/>
+
+							<!--<Button Grid.Column="4" Click="OnRefreshClick" Content="Details" Command="{Binding }"/>-->
+							<Button Content="Details" Click="OnDetailsClick" Grid.Column="4"/>
+						</Grid>
+					</DataTemplate>
+				</ListBox.ItemTemplate>
+			</ListBox>
+		</Grid>
+	</Grid>
 </Window>

@@ -2,6 +2,7 @@ using Avalonia.Controls;
 using System;
 using System.Threading.Tasks;
 using exercicioTek.ViewModels;
+using exercicioTek.Models;
 
 namespace exercicioTek.Views
 {
@@ -12,7 +13,7 @@ namespace exercicioTek.Views
         public MainWindow()
         {
             InitializeComponent();
-            _viewModel = new MainWindowViewModel();
+            _viewModel = new MainWindowViewModel(new NetworkDataModel());
             DataContext = _viewModel;
         }
 
@@ -20,6 +21,12 @@ namespace exercicioTek.Views
 
         // Método que será chamado ao clicar no botão
         private async void OnRefreshClick(object sender, Avalonia.Interactivity.RoutedEventArgs e)
+        {
+            // Chama a função de atualização da UI
+            await _viewModel.RefreshAsync();
+        }
+
+         private async void OnDetailsClick(object sender, Avalonia.Interactivity.RoutedEventArgs e)
         {
             // Chama a função de atualização da UI
             await _viewModel.RefreshAsync();
