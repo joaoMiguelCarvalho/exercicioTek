@@ -24,5 +24,8 @@ build_property.EnableCodeStyleSeverity =
 [/home/joao/workspace/exercicio-tekever/exercicioTek/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[/home/joao/workspace/exercicio-tekever/exercicioTek/Views/DetailsWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [/home/joao/workspace/exercicio-tekever/exercicioTek/Views/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

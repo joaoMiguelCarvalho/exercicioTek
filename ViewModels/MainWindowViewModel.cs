@@ -3,6 +3,7 @@ using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using exercicioTek.Models;
 using ReactiveUI;
+using Avalonia.Controls;
 
 namespace exercicioTek.ViewModels
 {
@@ -38,6 +39,25 @@ namespace exercicioTek.ViewModels
 				NetworkInterfaces = new ObservableCollection<NetworkInterfaceModel>(newNetworkDataModel.NetworkInterfacesData);
             });
         }
+
+        private void OnDetailsClick(object sender, Avalonia.Interactivity.RoutedEventArgs e)
+        {
+            var button = (Button)sender;
+            var selectedInterface = button.DataContext as NetworkInterfaceModel;
+            if (selectedInterface != null)
+            {
+                ToggleDetails(selectedInterface);
+            }
+        }
+
+         public void ToggleDetails(NetworkInterfaceModel selectedInterface)
+        {
+            if (selectedInterface != null)
+            {
+                selectedInterface.IsExpanded = !selectedInterface.IsExpanded;
+            }
+        }
+
     }
 }
 

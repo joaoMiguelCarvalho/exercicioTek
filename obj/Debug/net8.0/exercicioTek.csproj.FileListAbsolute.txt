@@ -1,3 +1,11 @@
+/home/joao/workspace/exercicio-tekever/exercicioTek/obj/Debug/net8.0/exercicioTek.csproj.AssemblyReference.cache
+/home/joao/workspace/exercicio-tekever/exercicioTek/obj/Debug/net8.0/Avalonia/Resources.Inputs.cache
+/home/joao/workspace/exercicio-tekever/exercicioTek/obj/Debug/net8.0/Avalonia/resources
+/home/joao/workspace/exercicio-tekever/exercicioTek/obj/Debug/net8.0/exercicioTek.GeneratedMSBuildEditorConfig.editorconfig
+/home/joao/workspace/exercicio-tekever/exercicioTek/obj/Debug/net8.0/exercicioTek.AssemblyInfoInputs.cache
+/home/joao/workspace/exercicio-tekever/exercicioTek/obj/Debug/net8.0/exercicioTek.AssemblyInfo.cs
+/home/joao/workspace/exercicio-tekever/exercicioTek/obj/Debug/net8.0/exercicioTek.csproj.CoreCompileInputs.cache
+/home/joao/workspace/exercicio-tekever/exercicioTek/obj/Debug/net8.0/exercicioTek.sourcelink.json
 /home/joao/workspace/exercicio-tekever/exercicioTek/bin/Debug/net8.0/exercicioTek
 /home/joao/workspace/exercicio-tekever/exercicioTek/bin/Debug/net8.0/exercicioTek.deps.json
 /home/joao/workspace/exercicio-tekever/exercicioTek/bin/Debug/net8.0/exercicioTek.runtimeconfig.json
@@ -56,14 +64,6 @@
 /home/joao/workspace/exercicio-tekever/exercicioTek/bin/Debug/net8.0/runtimes/win-arm64/native/libSkiaSharp.dll
 /home/joao/workspace/exercicio-tekever/exercicioTek/bin/Debug/net8.0/runtimes/win-x64/native/libSkiaSharp.dll
 /home/joao/workspace/exercicio-tekever/exercicioTek/bin/Debug/net8.0/runtimes/win-x86/native/libSkiaSharp.dll
-/home/joao/workspace/exercicio-tekever/exercicioTek/obj/Debug/net8.0/exercicioTek.csproj.AssemblyReference.cache
-/home/joao/workspace/exercicio-tekever/exercicioTek/obj/Debug/net8.0/Avalonia/Resources.Inputs.cache
-/home/joao/workspace/exercicio-tekever/exercicioTek/obj/Debug/net8.0/Avalonia/resources
-/home/joao/workspace/exercicio-tekever/exercicioTek/obj/Debug/net8.0/exercicioTek.GeneratedMSBuildEditorConfig.editorconfig
-/home/joao/workspace/exercicio-tekever/exercicioTek/obj/Debug/net8.0/exercicioTek.AssemblyInfoInputs.cache
-/home/joao/workspace/exercicio-tekever/exercicioTek/obj/Debug/net8.0/exercicioTek.AssemblyInfo.cs
-/home/joao/workspace/exercicio-tekever/exercicioTek/obj/Debug/net8.0/exercicioTek.csproj.CoreCompileInputs.cache
-/home/joao/workspace/exercicio-tekever/exercicioTek/obj/Debug/net8.0/exercicioTek.sourcelink.json
 /home/joao/workspace/exercicio-tekever/exercicioTek/obj/Debug/net8.0/Avalonia/exercicioTek.dll
 /home/joao/workspace/exercicio-tekever/exercicioTek/obj/Debug/net8.0/Avalonia/exercicioTek.pdb
 /home/joao/workspace/exercicio-tekever/exercicioTek/obj/Debug/net8.0/refint/Avalonia/exercicioTek.dll
