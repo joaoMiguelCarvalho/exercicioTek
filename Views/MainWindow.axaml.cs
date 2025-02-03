@@ -11,7 +11,9 @@ namespace exercicioTek.Views
     {
         private MainWindowViewModel _viewModel;
 
-        public MainWindow()
+        
+            public MainWindow()
+        
         {
             InitializeComponent();
             _viewModel = new MainWindowViewModel(new NetworkDataModel());
@@ -42,20 +44,57 @@ namespace exercicioTek.Views
                 }
         }
 
-
+/*
         private void OnDeleteIPv4Click(object sender, Avalonia.Interactivity.RoutedEventArgs e)
         {
             if (_viewModel.SelectedInterface != null)
             {
                 var button = (Button)sender;
-                string selectedIP = button.Tag as string;
+                string? selectedIP = button.Tag as string;
+                Console.WriteLine("selected ip is not null");
 
                 if (selectedIP != null)
                 {
                     _viewModel.SelectedInterface.ListIPv4Adresses.Remove(selectedIP);
+                    Console.WriteLine("selected ip is not null");
                 }
             }
+        }*/
+
+        private void OnDeleteIPv4Click(object sender, Avalonia.Interactivity.RoutedEventArgs e)
+        {
+            if (_viewModel.SelectedInterface == null)
+            {
+                Console.WriteLine("Nenhuma interface selecionada.");
+                return;
+            }
+
+            var button = sender as Button;
+            if (button == null)
+            {
+                Console.WriteLine("Erro: botão é nulo.");
+                return;
+            }
+
+            if (button.Tag is not string selectedIP)
+            {
+                Console.WriteLine("Erro: Tag do botão é nula ou não contém um IP válido.");
+                return;
+            }
+
+            Console.WriteLine($"Tentando remover IP: {selectedIP}");
+
+            if (_viewModel.SelectedInterface.ListIPv4Adresses.Contains(selectedIP))
+            {
+                _viewModel.SelectedInterface.ListIPv4Adresses.Remove(selectedIP);
+                Console.WriteLine("IP removido com sucesso.");
+            }
+            else
+            {
+                Console.WriteLine("Erro: IP não encontrado na lista.");
+            }
         }
+
 
         private async void OnEditIPv4Click(object sender, Avalonia.Interactivity.RoutedEventArgs e)
         {

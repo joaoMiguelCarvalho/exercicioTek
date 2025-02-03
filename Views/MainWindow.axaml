@@ -17,7 +17,7 @@
 			<Button Content="Refresh" Click="OnRefreshClick" Grid.Column="1"/>
 		</Grid>
 		<Grid Grid.Row="2" Margin="0 20 0 20">
-			<ListBox ItemsSource="{Binding NetworkInterfaces}">
+			<ListBox ItemsSource="{Binding NetworkInterfaces}" SelectedItem="{Binding SelectedInterface, Mode=TwoWay}">
 				<ListBox.ItemTemplate>
 					<DataTemplate>
 						<StackPanel>
@@ -39,7 +39,7 @@
 											<Grid Margin="0 10 0 0" ColumnDefinitions="*, Auto, Auto">
 												<TextBlock Grid.Column="0" Text="{Binding}" Foreground="LightGray"/>
 												<Button Grid.Column="1" Content="Edit" Click="OnEditIPv4Click" Tag="{Binding}"/>
-												<Button Grid.Column="2" Content="Delete" Click="OnDeleteIPv4Click" Tag="{Binding}"/>
+												<Button Grid.Column="2" Content="Delete" Click="OnDeleteIPv4Click" Tag="{Binding .}"/>
 											</Grid>
 										</DataTemplate>
 									</ItemsControl.ItemTemplate>

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("exercicioTek")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f731286373d6561e5d25b928f8f6c0a0b811634e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0f35b4a1f6f9ff411e277ec5ba5939cc80ca83df")]
 [assembly: System.Reflection.AssemblyProductAttribute("exercicioTek")]
 [assembly: System.Reflection.AssemblyTitleAttribute("exercicioTek")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -15,9 +15,9 @@ namespace exercicioTek.Views
             {
                 DataContext = selectedInterface; // Define o DataContext como a interface selecionada
                 // Exibir detalhes do IPv4
-                var ipv4Addresses = string.Join(", ", selectedInterface.ListIPv4Adresses);
-                var ipv4TextBlock = this.FindControl<TextBlock>("IPv4Details");
-                ipv4TextBlock.Text = ipv4Addresses;
+                //var ipv4Addresses = string.Join(", ", selectedInterface.ListIPv4Adresses);
+                //var ipv4TextBlock = this.FindControl<TextBlock>("IPv4Details");
+                //ipv4TextBlock.Text = ipv4Addresses;
             }
            
             

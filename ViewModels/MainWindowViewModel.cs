@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using exercicioTek.Models;
 using ReactiveUI;
 using Avalonia.Controls;
+using System;
 
 namespace exercicioTek.ViewModels
 {
@@ -15,8 +16,13 @@ namespace exercicioTek.ViewModels
         public NetworkInterfaceModel? SelectedInterface
         {
             get => _selectedInterface;
-            set => this.RaiseAndSetIfChanged(ref _selectedInterface, value);
+            set 
+            {
+               this.RaiseAndSetIfChanged(ref _selectedInterface, value);
+               Console.WriteLine($"Interface selecionada: {value?.Name}");     
+            }
         }
+       
 
         public MainWindowViewModel(NetworkDataModel networkDataModel)
         {
