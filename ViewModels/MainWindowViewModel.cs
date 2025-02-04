@@ -30,7 +30,7 @@ namespace exercicioTek.ViewModels
         }
 
         /// <summary>
-        /// Method for Refresh Button
+        /// Method for Refresh Button, button is hidden, something to do in the future
         /// </summary>
         public async Task RefreshAsync()
         {

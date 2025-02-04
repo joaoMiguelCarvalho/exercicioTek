@@ -70,3 +70,6 @@
 /home/joao/workspace/exercicio-tekever/exercicioTek/obj/Debug/net8.0/exercici.B0771311.Up2Date
 /home/joao/workspace/exercicio-tekever/exercicioTek/obj/Debug/net8.0/exercicioTek.genruntimeconfig.cache
 /home/joao/workspace/exercicio-tekever/exercicioTek/obj/Debug/net8.0/ref/exercicioTek.dll
+/home/joao/workspace/exercicio-tekever/exercicioTek/obj/Debug/net8.0/exercicioTek.dll
+/home/joao/workspace/exercicio-tekever/exercicioTek/obj/Debug/net8.0/refint/exercicioTek.dll
+/home/joao/workspace/exercicio-tekever/exercicioTek/obj/Debug/net8.0/exercicioTek.pdb

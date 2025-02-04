@@ -22,16 +22,25 @@ namespace exercicioTek.Views
 
 
 
-        // Método que será chamado ao clicar no botão
+        /// <summary>
+        /// Refresh ClicK Method
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private async void OnRefreshClick(object sender, Avalonia.Interactivity.RoutedEventArgs e)
         {
-            // Chama a função de atualização da UI
+            // Calls the UI update function
             await _viewModel.RefreshAsync();
         }
-
+        
+        /// <summary>
+		/// Details ClicK Method
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
         private void OnDetailsClick(object sender, Avalonia.Interactivity.RoutedEventArgs e)
         {
-            // Verifica se há uma interface selecionada
+            
             var button = (Button)sender;
             var selectedInterface = button.DataContext as NetworkInterfaceModel;
             if (selectedInterface != null)
@@ -61,48 +70,91 @@ namespace exercicioTek.Views
             }
         }*/
 
+        /// <summary>
+		/// Delete ClicK Method
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
         private void OnDeleteIPv4Click(object sender, Avalonia.Interactivity.RoutedEventArgs e)
         {
             if (_viewModel.SelectedInterface == null)
             {
-                Console.WriteLine("Nenhuma interface selecionada.");
+                Console.WriteLine("No interfaces selected.");
                 return;
             }
 
             var button = sender as Button;
             if (button == null)
             {
-                Console.WriteLine("Erro: botão é nulo.");
+                Console.WriteLine("Error: button is null.");
                 return;
             }
 
             if (button.Tag is not string selectedIP)
             {
-                Console.WriteLine("Erro: Tag do botão é nula ou não contém um IP válido.");
+                Console.WriteLine("Error: Button tag is null or does not contain a valid IP.");
                 return;
             }
 
-            Console.WriteLine($"Tentando remover IP: {selectedIP}");
+            Console.WriteLine($"Trying to remove IP: {selectedIP}");
 
             if (_viewModel.SelectedInterface.ListIPv4Adresses.Contains(selectedIP))
             {
                 _viewModel.SelectedInterface.ListIPv4Adresses.Remove(selectedIP);
-                Console.WriteLine("IP removido com sucesso.");
+                Console.WriteLine("IP removed successfully.");
             }
-            else
-            {
-                Console.WriteLine("Erro: IP não encontrado na lista.");
-            }
-        }
-
-
-        private async void OnEditIPv4Click(object sender, Avalonia.Interactivity.RoutedEventArgs e)
-        {
             
         }
 
 
+        /// <summary>
+		/// Add ClicK Method
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private async void OnAddIPv4Click(object sender, Avalonia.Interactivity.RoutedEventArgs e)
+        {
+	        if (_viewModel.SelectedInterface == null)
+	        {
+		        return;
+	        }
+			
+	        if (_viewModel.SelectedInterface.NewIPv4 != "")
+	        {
+		        _viewModel.SelectedInterface.ListIPv4Adresses.Add(_viewModel.SelectedInterface.NewIPv4);
+		        _viewModel.SelectedInterface.NewIPv4 = "";
+	        }
+        }
 
+		/// <summary>
+		/// Edit ClicK Method
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private async void OnEditIPv4Click(object sender, Avalonia.Interactivity.RoutedEventArgs e)
+        {
+			if (_viewModel.SelectedInterface == null)
+			{
+				return;
+			}
+			
+			var button = sender as Button;
+
+			if (button == null)
+			{
+				return;
+			}
+
+			if (button.Tag is not string selectedIP)
+			{
+				return;
+			}
+
+			var newIPv4Address = "NewEditValue";
+
+			_viewModel.SelectedInterface.ListIPv4Adresses.Remove(selectedIP);
+			_viewModel.SelectedInterface.ListIPv4Adresses.Add(newIPv4Address);
+		}    
     }
 }
 
