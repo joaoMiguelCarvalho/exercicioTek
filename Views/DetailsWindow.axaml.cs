@@ -1,4 +1,4 @@
-/*using Avalonia.Controls;
+using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 using exercicioTek.Models;
 using System.Linq;
@@ -28,4 +28,4 @@ namespace exercicioTek.Views
             AvaloniaXamlLoader.Load(this);
         }
     }
-}*/
+}
